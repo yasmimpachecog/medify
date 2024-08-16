@@ -1,0 +1,14 @@
+html,body{
+    margin:0%;
+    padding:0%;
+    background-color:#d3d3d3;
+    width: 100vw;
+    height:99.9%;
+}
+
+body{
+    background-image:url('../../assets/fundo_menu2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   }

@@ -1,0 +1,53 @@
+html,body{
+    margin:0%;
+    padding:0%;
+    background-color:#d3d3d3;
+    width: 100vw;
+    height:99.9%;
+}
+
+body{
+    background-image:url('../../assets/fundo_menu2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   }
+
+.pagina{
+    width:82.5vw;
+    height:84%;
+    
+    position: absolute;
+    top:0;
+    right: 0;
+}
+
+.contato article{
+    width:99%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap:60px;
+}
+
+.contato a{
+    font-family:happy, 'Times New Roman', Times, serif;
+    color:#000000;
+    padding: 25px;
+    background: rgb(255, 255, 255);
+    width:220px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size:50px;
+}
+
+.pagina h1{
+    border-bottom:300px;
+    font-family:dino,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:rgb(0, 0, 0);
+    font-size:70px;
+    margin:10px;
+    text-align: center;
+}

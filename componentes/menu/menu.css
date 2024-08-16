@@ -1,0 +1,68 @@
+@import url('../../assets/fonts/fonts.css');
+
+.menu{
+    width:15vw;
+    height:99%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-evenly;
+    background-color: rgb(255, 255, 255);
+    border: 3px rgb(85, 167, 108) solid;
+    position:absolute;
+    left:0;
+    top:0;
+}
+
+nav{
+    height:80%;
+}
+
+summary{
+    font-family:happy,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:rgb(0, 0, 0);
+    font-size: 31px;
+    margin:2px;
+}
+
+details div{
+    display: flex;
+    flex-direction:column;
+}
+
+.menu a{
+    font-family:happy,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:rgb(0, 0, 0);
+    font-size: 30px;
+    text-decoration: none;
+    
+}
+
+.menu h1{
+    font-family:dino,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:rgb(22, 189, 89);
+    font-size:50px;
+    margin:10px;
+}
+
+.sair{
+    margin-bottom:7px;
+    padding:9px;
+    background-color:rgb(218, 215, 215);
+    color:rgb(0, 0, 0);
+    border:1px rgb(184, 184, 184) solid;
+    border-radius:4px;
+    margin:0%;
+    font-size:7px;
+    width:40px;
+    height:20px;
+    background-color: rgb(216, 216, 216);
+    text-decoration: none;
+    font-family:dino, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.sair:hover{
+    background-color:rgb(255, 57, 57);
+    box-shadow:0 0 1em rgb(255, 38, 38);
+    transition-duration: 0.3s;
+}
