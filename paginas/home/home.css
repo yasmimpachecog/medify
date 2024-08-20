@@ -12,3 +12,31 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
    }
+
+   .relatorio{
+    width:82.5vw;
+    height:99.5vh;
+    position: absolute;
+    top:0;
+    right: 0;
+}
+.relatorio table{
+    width:100%;
+    font-family:happy,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:25px;
+}
+.relatorio{ 
+    width: 90%;
+    padding:10px;
+    height:38%;
+    margin-top:65px;
+    }
+    
+    h1{
+        font-family:happy, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    header{
+        font-family:happy, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+    }

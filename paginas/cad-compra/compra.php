@@ -1,6 +1,6 @@
 <?php
 //Inclui o relatório de usuários
-include_once '../cad-ordemcompra/compra.php';
+include_once '../cad-compra/compra.php';
 
 
 //Inicializa uma variavel com nome de mensagem com valor null
@@ -50,12 +50,12 @@ if($_GET['status']){
         <input type="text" name="solicitação do Medicamento" placeholder="Solicitação">
        </div>
        <div class="linha"> 
-        <input type="text"name="datadeprevisão" placeholder="Data de Previsão">
+        <input type="date"name="datadeprevisão" placeholder="Data de Previsão">
        </div>
        <div class="linha">
-       <input type="text" name="datadeentrega" placeholder="Data de Entrega">
+       <input type="date" name="datadeentrega" placeholder="Data de Entrega">
        <div class="linha"> 
-       <input type="text" name="datadepagamento" placeholder="Data de Pagamento">
+       <input type="date" name="datadepagamento" placeholder="Data de Pagamento">
 
 <div class="controles">
   <button type="subimit" class="salvar">Salvar</button>
@@ -91,15 +91,3 @@ echo('<p>'.$mensagem.'</p>');
         //Utilizar a função foreach
         //para interar entre os itens do array
         //que é o nosso $relatorio
-        foreach($relatorio as $ordemcompra){echo("
-              <tr>
-          <td><button>Excluir</button></td> 
-          <td>".$compravenda ['id']."</td> 
-          <td>".$compravenda ['Solicitação']."</td> 
-          <td>".$compravenda ['Data de Previsão']."</td> 
-          <td>".$compravenda ['Data de Entrega']."</td> 
-          <td>".$compravenda ['Data de Pagamento']."</td> 
-     
-        </tr>
-          ");
-        }
