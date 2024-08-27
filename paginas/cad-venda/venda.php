@@ -99,15 +99,7 @@ if ($_GET) {
           <th>Cliente</th>
         </tr>
 
-        <tr>
-          <td><button>Excluir</button></td>
-          <td>1</td>
-          <td>07/08/2024</td>
-          <td>07/08/2024</td>
-          <th>Débito</th>
-          <td></td>
-
-        </tr>
+  
         <?php
         //Utilizar a função foreach
         //para interar entre os itens do array
@@ -115,7 +107,7 @@ if ($_GET) {
         foreach ($relatorio as $Venda) {
           echo ("
               <tr>
-          <td><button>Excluir</button></td> 
+          <td><button class=\"excluir\">Excluir</button></td> 
           <td>" . $Venda['id'] . "</td> 
           <td>" . $Venda['dt_venda'] . "</td> 
           <td>" . $Venda['ds_situacao'] . "</td> 
@@ -125,3 +117,9 @@ if ($_GET) {
         </tr>
           ");
         }
+        ?>
+        </table>
+        </div>
+        </section>
+        </body>
+        </html>

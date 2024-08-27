@@ -14,10 +14,10 @@ try{
     //no arquivo por meio do require_once),para preparar um instrução
     //sql (banco de dados).
   $preparacao=$conexao->prepare("
-  insert into tb_venda(
-    dt_venda,dt_pagamento,cliente,metodo_pagamento,tb_situacao_id
+  insert into tb_compra(
+    dt_compra,dt_pagamento,cliente,metodo_pagamento,tb_situacao_id
   ) values (
-    :dt_venda,:dt_pagamento,:cliente,:metodo_pagamento,:situacao
+    :dt_compra,:dt_pagamento,:cliente,:metodo_pagamento,:situacao
   )
   ");
   //Utiliza o método bindParam da classe PreparedStatement dísponivel
@@ -25,8 +25,8 @@ try{
   //A função bindParam troca um dos parametros da instrução sql pelo
   //valor contido em uma variável.Não esquecer de mudar o tipo no
   // ultimo argumento.
-  $preparacao->bindParam(':dt_venda',$requisicao['dt_venda'],PDO::PARAM_STR);
-  $preparacao->bindParam(':dt_pagamento',$requisicao['dt_venda'],PDO::PARAM_STR);
+  $preparacao->bindParam(':dt_compra',$requisicao['dt_compra'],PDO::PARAM_STR);
+  $preparacao->bindParam(':dt_pagamento',$requisicao['dt_compra'],PDO::PARAM_STR);
   $preparacao->bindParam(':cliente',$requisicao['cliente'],PDO::PARAM_STR);
   $preparacao->bindParam(':metodo_pagamento',$requisicao['metodo_pagamento'],PDO::PARAM_STR);
   $preparacao->bindParam(':situacao',$requisicao['situacao'],PDO::PARAM_STR);
@@ -41,7 +41,7 @@ try{
         //Caso isso seja positivo, retorna para a pagina de cadastro
         //com o status 201 (Created )
         header(
-            'location:../../paginas/cad-venda/venda.php?status=201' );
+            'location:../../paginas/cad-compra/compra.php?status=201' );
             //Morre a execução para evitar lacunas de segurança.
             die();
 
@@ -49,7 +49,7 @@ try{
         //Caso a quantidade não seja 1, retorna  com os status 
         //400 (Bad Request),informando que faltou algo
         header(
-            'location:../../paginas/cad-venda/venda.php?status=500');
+            'location:../../paginas/cad-compra/compra.php?status=500');
             //Morre a execução para evitar lacunas de segurança
             die();
     }

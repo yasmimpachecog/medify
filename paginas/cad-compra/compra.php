@@ -1,6 +1,7 @@
 <?php
 //Inclui o relatório de usuários
 include_once '../cad-compra/compra.php';
+include_once '../../backend/compra/relatorioCompra.php';
 
 
 //Inicializa uma variavel com nome de mensagem com valor null
@@ -43,7 +44,7 @@ if($_GET['status']){
   <header>
     <h1>Adiministração | Ordem de Compra<h1>
 </header>
-<form action="../backend/usuario/criarUsuario" method="post">
+<form action="../backend/compra/criarCompra.php" method="post">
  
 <div class="inputs">   
         <div class="linha">
@@ -77,17 +78,25 @@ echo('<p>'.$mensagem.'</p>');
   <th>Data de Entrega</th>
   <th>Data de Pagamento</th>
 </tr>
-
-          <tr>
-          <td><button>Excluir</button></td> 
-          <td>1</td> 
-          <td>30 comprimidos</td> 
-          <th>01/05/2024</th>
-          <td>05/05/2024</td> 
-          <td>10/05/2024</td> 
-     
-        </tr>
         <?php
         //Utilizar a função foreach
         //para interar entre os itens do array
         //que é o nosso $relatorio
+        foreach ($relatorio as $compra) {
+          echo ("    
+              <tr>
+          <td><button class=\"excluir\">Excluir</button></td> 
+          <td>" . $compra['id'] . "</td> 
+          <td>" . $compra['ds_situacao'] . "</td> 
+          <td>" . $compra['metodo_pagamento'] . "</td> 
+          <td>" . $compra['cliente'] . "</td> 
+     
+        </tr>
+          ");
+        }
+        ?>
+        </table>
+        </div>
+        </section>
+        </body>
+        </html>
